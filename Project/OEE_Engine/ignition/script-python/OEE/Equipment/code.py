@@ -233,7 +233,7 @@ class Equipment:
 	def updateContextDatabase(self):
 		if self.getContextId() is None: return
 		params = {
-			"BeginDateTime": self.getProductionBeginDateTime(),
+			"BeginDateTime": self.getContextBeginDateTime(),
 			"ContextId": self.getContextId(),
 			"EndDateTime": self.getTimestampDateTime(),
 			"EquipmentId": self.getEquipmentId(),
