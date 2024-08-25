@@ -1,0 +1,115 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "8f534a99083259ad743e91686d4c39bc2292529dbdc7a2a804e882562d861d0b",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "unauthenticated",
+      "timestamp": "2024-08-24T19:24:33Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "BeginDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "EndDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "EquipmentId",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Mode",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Shift",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "ShiftBeginDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "ShiftEndDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "ContextId",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "IdealRateCount",
+        "sqlType": 5
+      },
+      {
+        "type": "Parameter",
+        "identifier": "IdealRateSeconds",
+        "sqlType": 5
+      },
+      {
+        "type": "Parameter",
+        "identifier": "LotNumber",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Operator",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Product",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Units",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "WorkOrder",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "WorkOrderBeginDateTime",
+        "sqlType": 8
+      }
+    ]
+  }
+}

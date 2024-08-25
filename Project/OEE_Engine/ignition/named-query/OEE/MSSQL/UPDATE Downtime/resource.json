@@ -1,0 +1,60 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "a35ac1c13931167ae6d87ce1d9eafcb78671966694ade4053ea4ebd9e2510304",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "unauthenticated",
+      "timestamp": "2024-08-24T20:23:27Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "BeginDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "EndDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "DowntimeId",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "ContextId",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "EventDateTime",
+        "sqlType": 7
+      }
+    ]
+  }
+}

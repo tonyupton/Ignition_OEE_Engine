@@ -1,0 +1,125 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "e6f0627513da3f9085d443b80eae42581e085fc7c26c569ed1ad88b6c456dc70",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "unauthenticated",
+      "timestamp": "2024-08-24T14:29:36Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "equipmentId",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "beginDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "endDateTime",
+        "sqlType": 8
+      },
+      {
+        "type": "Parameter",
+        "identifier": "shift",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "operator",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "mode",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Product",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "workOrder",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "lotNumber",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "optimalRate",
+        "sqlType": 5
+      },
+      {
+        "type": "Parameter",
+        "identifier": "producedCount",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "consumedCount",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "rejectedCount",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "runtimeSeconds",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "downtimeSeconds",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "productionSeconds",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "stopCount",
+        "sqlType": 2
+      },
+      {
+        "type": "Parameter",
+        "identifier": "productionLogId",
+        "sqlType": 7
+      }
+    ]
+  }
+}

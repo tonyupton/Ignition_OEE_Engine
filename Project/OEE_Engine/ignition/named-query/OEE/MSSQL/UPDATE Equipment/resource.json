@@ -1,0 +1,75 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "UpdateQuery",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "68a4104762b3d2b240ee84df9ceb13723acd06de3dc228ff7098b3a65829eb5a",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "unauthenticated",
+      "timestamp": "2024-08-22T01:17:44Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "Enterprise",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Site",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Area",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "WorkCenter",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "WorkUnit",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "UDTPath",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "EquipmentId",
+        "sqlType": 7
+      },
+      {
+        "type": "Parameter",
+        "identifier": "Name",
+        "sqlType": 7
+      }
+    ]
+  }
+}

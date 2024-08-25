@@ -1,0 +1,736 @@
+{
+  "name": "OEE_Engine",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "name": "Equipment",
+      "parameters": {
+        "ProjectName": {
+          "dataType": "String",
+          "value": "OEE_Engine"
+        },
+        "UpdateIntervalSeconds": {
+          "dataType": "Integer",
+          "value": 5
+        }
+      },
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "Info",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Area",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "WorkCenter",
+              "tagType": "AtomicTag"
+            },
+            {
+              "engHigh": {
+                "bindType": "parameter",
+                "binding": "{PathToTag}"
+              },
+              "valueSource": "expr",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "expression": "{InstanceName}",
+              "dataType": "String",
+              "name": "Name",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Site",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\t\n\tif currentValue.value is None:\n\t\timport uuid\n\t\tsystem.tag.writeAsync([tagPath], [str(uuid.uuid4()).upper()])\n\telse:\n\t\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\t\tpayload \u003d { \n\t\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t\t}\n\t\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "EquipmentId",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "WorkUnit",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentInfoChangedEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Enterprise",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "Production",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "Boolean",
+              "name": "Running",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "dataType": "Int8",
+              "name": "BadCount",
+              "value": 0,
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "dataType": "Int8",
+              "name": "GoodCount",
+              "value": 0,
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "Logic",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Context",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "Mode",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "WorkOrder",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "BeginDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "ShiftBeginDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "LotNumber",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Boolean",
+                  "name": "Enabled",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Float8",
+                  "name": "IdealRateCount",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "Operator",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "Shift",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "ContextId",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "WorkOrderBeginDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "Units",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Float8",
+                  "name": "IdealRateSeconds",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "ShiftEndDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "Product",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "valueSource": "expr",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "expression": "now(1000 * {UpdateIntervalSeconds})",
+              "dataType": "DateTime",
+              "name": "UpdateInterval",
+              "formatString": "yyyy-MM-dd h:mm:ss aa",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "RuntimeTimer",
+              "typeId": "OEE_Engine/Timer",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "Logic",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Timestamp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Value",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "ElapsedSeconds",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "valueSource": "expr",
+                  "expression": "{[.]../../Production/Running}",
+                  "name": "Input",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ElapsedSeconds",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "Production",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "ContextId",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Int8",
+                  "name": "BadCount",
+                  "value": 0,
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Int8",
+                  "name": "GoodCount",
+                  "value": 0,
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "BeginDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "ProductionId",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Int8",
+                  "name": "DowntimeSeconds",
+                  "value": 0,
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Int8",
+                  "name": "RuntimeSeconds",
+                  "value": 0,
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "Int8",
+                  "name": "StopCount",
+                  "value": 0,
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "valueSource": "expr",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.value),\n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "expression": "dateFormat({[System]Gateway/CurrentDateTime}, \"YYYY-MM-dd HH:00:00\")",
+              "dataType": "DateTime",
+              "name": "Hour",
+              "formatString": "yyyy-MM-dd h:mm:ss aa",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "StopCounter",
+              "typeId": "OEE_Engine/Counter",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "valueSource": "expr",
+                  "expression": "!{[.]../../Production/Running}",
+                  "readOnly": true,
+                  "name": "Input",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Logic",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Value",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Count",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            },
+            {
+              "name": "DowntimeTimer",
+              "typeId": "OEE_Engine/Timer",
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "valueSource": "expr",
+                  "expression": "!{[.]../../Production/Running}",
+                  "name": "Input",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ElapsedSeconds",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Logic",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Timestamp",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Value",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "ElapsedSeconds",
+                      "tagType": "AtomicTag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Downtime",
+              "tagType": "Folder",
+              "tags": [
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "BeginDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "DateTime",
+                  "name": "EventDateTime",
+                  "formatString": "yyyy-MM-dd h:mm:ss aa",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "DowntimeId",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "valueSource": "memory",
+                  "dataType": "String",
+                  "name": "ContextId",
+                  "tagType": "AtomicTag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Context",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "Float8",
+              "name": "IdealRateCount",
+              "value": 1.0,
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Shift",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Product",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "DateTime",
+              "name": "ShiftBeginDateTime",
+              "formatString": "yyyy-MM-dd h:mm:ss aa",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Mode",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "Float8",
+              "name": "IdealRateSeconds",
+              "value": 60.0,
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Units",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "Operator",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "LotNumber",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "String",
+              "name": "WorkOrder",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "DateTime",
+              "name": "WorkOrderBeginDateTime",
+              "formatString": "yyyy-MM-dd h:mm:ss aa",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "DateTime",
+              "name": "ShiftEndDateTime",
+              "formatString": "yyyy-MM-dd h:mm:ss aa",
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "eventScripts": [
+                {
+                  "eventid": "valueChanged",
+                  "script": "\tif currentValue.quality.isNotGood(): return\n\tprojectName \u003d tag[\u0027parameters\u0027][\u0027ProjectName\u0027]\n\tpayload \u003d { \n\t\t\"timestamp\": system.date.toMillis(currentValue.timestamp), \n\t\t\"udtPath\": \u0027/\u0027.join(tagPath.split(\u0027/\u0027)[:-2])\n\t}\n\tsystem.util.sendMessage(projectName, \"EquipmentLogicUpdateEvent\", payload, scope\u003d\"G\")"
+                }
+              ],
+              "dataType": "Boolean",
+              "name": "Enabled",
+              "value": false,
+              "tagType": "AtomicTag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Timer",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "Logic",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "valueSource": "memory",
+              "dataType": "Boolean",
+              "name": "Value",
+              "value": false,
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "dataType": "Int8",
+              "name": "ElapsedSeconds",
+              "value": 0,
+              "tagType": "AtomicTag"
+            },
+            {
+              "valueSource": "memory",
+              "dataType": "DateTime",
+              "name": "Timestamp",
+              "formatString": "yyyy-MM-dd h:mm:ss aa",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "valueSource": "expr",
+          "expression": "{[.]Logic/ElapsedSeconds} + if({[.]Logic/Value}, secondsBetween({[.]Logic/Timestamp},now(1000)), 0)",
+          "readOnly": true,
+          "dataType": "Int4",
+          "name": "ElapsedSeconds",
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "memory",
+          "eventScripts": [
+            {
+              "eventid": "valueChanged",
+              "script": "\tif currentValue.quality.isNotGood(): return\n\t\n\t### Get the timestamp with millis set to 0\n\tcurrentValueTimestamp \u003d system.date.setTime(\n\t\t\tcurrentValue.timestamp, \n\t\t\tsystem.date.getHour24(currentValue.timestamp),\n\t\t\tsystem.date.getMinute(currentValue.timestamp),\n\t\t\tsystem.date.getSecond(currentValue.timestamp))\n\t\n\ttagPaths \u003d [\n\t\t\"[.]Logic/Value\", \n\t\t\"[.]Logic/Timestamp\",\n\t\t\"[.]Logic/ElapsedSeconds\"\n\t]\n\t(value, timestamp, elapsedSeconds) \u003d tuple([tag.value for tag in system.tag.readBlocking(tagPaths)])\n\t\n\tif timestamp is None:\n\t\ttimestamp \u003d currentValueTimestamp\n\t\n\tif currentValue.value !\u003d value:\n\t\tif value:\n\t\t\telapsedSeconds +\u003d system.date.secondsBetween(timestamp, currentValueTimestamp)\n\t\t\n\t\ttagValues \u003d [\n\t\t\tcurrentValue.value,\n\t\t\tcurrentValueTimestamp,\n\t\t\telapsedSeconds\n\t\t]\n\t\tsystem.tag.writeAsync(tagPaths, tagValues)"
+            }
+          ],
+          "readOnly": false,
+          "dataType": "Boolean",
+          "name": "Input",
+          "value": false,
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "name": "Counter",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "Logic",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "valueSource": "memory",
+              "dataType": "Boolean",
+              "name": "Value",
+              "value": false,
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "valueSource": "memory",
+          "eventScripts": [
+            {
+              "eventid": "valueChanged",
+              "script": "\tif initialChange: return\n\t\n\ttagPaths \u003d [\n\t\t\"[.]Logic/Value\",\n\t\t\"[.]Count\"\n\t]\n\t(value, count) \u003d tuple(tag.value for tag in system.tag.readBlocking(tagPaths))\n\t\n\tif not value and currentValue.value:\n\t\tsystem.tag.writeAsync(tagPaths, [True, count + 1])\n\telif value and not currentValue.value:\n\t\tsystem.tag.writeAsync([\"[.]Logic/Value\"], [False])"
+            }
+          ],
+          "dataType": "Boolean",
+          "name": "Input",
+          "value": false,
+          "tagType": "AtomicTag"
+        },
+        {
+          "valueSource": "memory",
+          "dataType": "Int8",
+          "name": "Count",
+          "value": 0,
+          "tagType": "AtomicTag"
+        }
+      ]
+    }
+  ]
+}

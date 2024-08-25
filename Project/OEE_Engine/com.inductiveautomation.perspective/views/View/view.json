@@ -1,0 +1,433 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "P"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 2,
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "classes": "panel"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "C1"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "P"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 2,
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "classes": "panel"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "C2"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "P"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 2,
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "classes": "panel"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "C3"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "R1"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "MovingAnalogIndicator"
+                    },
+                    "position": {
+                      "height": 224.01,
+                      "width": 54.02,
+                      "x": 7.91,
+                      "y": 90.7
+                    },
+                    "props": {
+                      "desiredHigh": 65,
+                      "desiredLow": 40,
+                      "highAlarm": 90,
+                      "highHighAlarm": null,
+                      "highInterlock": null,
+                      "lowAlarm": 10,
+                      "lowInterlock": null,
+                      "lowLowAlarm": null,
+                      "reverseIndicator": true
+                    },
+                    "type": "ia.display.moving-analog-indicator"
+                  },
+                  {
+                    "meta": {
+                      "name": "Sparkline"
+                    },
+                    "position": {
+                      "height": 212.01,
+                      "width": 250,
+                      "x": 137.34,
+                      "y": 24
+                    },
+                    "props": {
+                      "points": [
+                        59,
+                        80,
+                        80,
+                        100,
+                        68,
+                        62,
+                        87,
+                        72,
+                        42,
+                        49,
+                        58,
+                        53,
+                        57,
+                        51,
+                        42,
+                        32,
+                        37,
+                        30,
+                        24,
+                        38,
+                        57,
+                        29,
+                        18,
+                        32,
+                        38,
+                        24,
+                        24,
+                        24,
+                        20,
+                        21,
+                        29,
+                        32,
+                        26,
+                        18,
+                        32,
+                        36,
+                        30,
+                        36,
+                        29,
+                        32,
+                        29,
+                        28,
+                        41,
+                        20,
+                        28,
+                        58,
+                        18,
+                        24,
+                        16,
+                        2,
+                        22,
+                        17,
+                        22,
+                        21,
+                        12,
+                        22,
+                        14,
+                        13,
+                        11,
+                        20,
+                        16,
+                        16,
+                        18,
+                        12,
+                        28,
+                        28,
+                        32,
+                        16,
+                        16,
+                        24,
+                        16,
+                        20,
+                        14,
+                        18,
+                        12,
+                        26,
+                        17,
+                        11,
+                        30,
+                        16,
+                        9,
+                        20,
+                        42,
+                        13,
+                        13,
+                        24,
+                        17,
+                        13,
+                        20,
+                        12,
+                        14,
+                        13,
+                        14,
+                        71,
+                        82,
+                        20,
+                        16,
+                        20,
+                        22,
+                        17,
+                        5
+                      ]
+                    },
+                    "type": "ia.display.sparkline"
+                  },
+                  {
+                    "meta": {
+                      "name": "LinearScale"
+                    },
+                    "position": {
+                      "height": 212.01,
+                      "width": 122.98,
+                      "x": 399.34,
+                      "y": 24.68
+                    },
+                    "props": {
+                      "indicators": [
+                        {
+                          "color": "",
+                          "extent": 15,
+                          "indicatorStyle": "range",
+                          "label": "High",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 25,
+                          "opacity": 0.4,
+                          "stroke": 1.5,
+                          "value": 85
+                        },
+                        {
+                          "color": "",
+                          "extent": 2,
+                          "indicatorStyle": "wedge",
+                          "label": "Low",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 25,
+                          "opacity": 1,
+                          "stroke": 2,
+                          "value": 37
+                        }
+                      ],
+                      "mirror": true,
+                      "style": {
+                        "fontSize": "9pt"
+                      }
+                    },
+                    "type": "ia.display.linear-scale"
+                  },
+                  {
+                    "meta": {
+                      "name": "Button"
+                    },
+                    "position": {
+                      "height": 34,
+                      "width": 80,
+                      "x": 174.33,
+                      "y": 334.67
+                    },
+                    "props": {
+                      "primary": false
+                    },
+                    "type": "ia.input.button"
+                  }
+                ],
+                "meta": {
+                  "name": "CoordinateContainer"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "classes": "panel"
+                  }
+                },
+                "type": "ia.container.coord"
+              }
+            ],
+            "meta": {
+              "name": "C1"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 2,
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "P"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 2,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "panel"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "R1"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "P"
+                    },
+                    "position": {
+                      "basis": "0px",
+                      "grow": 2,
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "panel"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "R2"
+                },
+                "position": {
+                  "basis": "0px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "C2"
+            },
+            "position": {
+              "basis": "0px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "R2"
+        },
+        "position": {
+          "basis": "0px",
+          "grow": 2,
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}
