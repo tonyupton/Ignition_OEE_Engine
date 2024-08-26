@@ -1,0 +1,60 @@
+{
+  "custom": {
+    "currentDateTime": {
+      "$": [
+        "ts",
+        192,
+        1724641108575
+      ],
+      "$ts": 1724641108575
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.currentDateTime": {
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Markdown"
+            },
+            "position": {
+              "basis": "10em"
+            },
+            "props": {
+              "source": "#### OEE Schema created.\n",
+              "style": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.markdown"
+          }
+        ],
+        "meta": {
+          "name": "Content"
+        },
+        "position": {
+          "basis": "30em"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

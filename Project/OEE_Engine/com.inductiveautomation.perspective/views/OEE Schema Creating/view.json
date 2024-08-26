@@ -1,0 +1,81 @@
+{
+  "custom": {
+    "currentDateTime": {
+      "$": [
+        "ts",
+        192,
+        1724642096009
+      ],
+      "$ts": 1724642096009
+    }
+  },
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tif not OEE.Database.isSchemaLoaded():\n\t\tOEE.Database.createSchema()"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.currentDateTime": {
+      "binding": {
+        "config": {
+          "expression": "now(1000)"
+        },
+        "type": "expr"
+      },
+      "onChange": {
+        "enabled": null,
+        "script": "\tif OEE.Database.isSchemaLoaded():\n\t\tsystem.perspective.navigate(view\u003d\"OEE Schema Created\")"
+      },
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Markdown"
+            },
+            "position": {
+              "basis": "10em"
+            },
+            "props": {
+              "source": "#### Creating OEE Schema...\n",
+              "style": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.markdown"
+          }
+        ],
+        "meta": {
+          "name": "Content"
+        },
+        "position": {
+          "basis": "30em"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

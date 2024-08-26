@@ -12,13 +12,13 @@
     "fallbackValue": "",
     "maxReturnSize": 100,
     "cacheUnit": "SEC",
-    "type": "UpdateQuery",
+    "type": "Query",
     "enabled": true,
     "cacheAmount": 1,
     "cacheEnabled": false,
     "database": "",
     "fallbackEnabled": false,
-    "lastModificationSignature": "85afd39d4640388ca9a86e3651327e28edcb78a4aa3e37da2f45ab6ff44ad120",
+    "lastModificationSignature": "4d874760ee3376e60c19ac67b9e6c08984186441f520d8cd594851e7f3d67401",
     "permissions": [
       {
         "zone": "",
@@ -27,8 +27,7 @@
     ],
     "lastModification": {
       "actor": "unauthenticated",
-      "timestamp": "2024-08-26T03:13:56Z"
-    },
-    "syntaxProvider": "class com.adbs.syntax.MSSQLSyntaxProvider"
+      "timestamp": "2024-08-25T20:11:41Z"
+    }
   }
 }

@@ -1,0 +1,97 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Markdown"
+            },
+            "position": {
+              "basis": "10em"
+            },
+            "props": {
+              "source": "#### OEE Schema not detected.\n\n\n\nWould you like to create the schema in the projects default database?",
+              "style": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.markdown"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Cancel Button"
+                },
+                "position": {
+                  "basis": "10em"
+                },
+                "props": {
+                  "primary": false,
+                  "text": "Cancel"
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "params": {},
+                        "view": "OEE Schema Creating"
+                      },
+                      "scope": "C",
+                      "type": "nav"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "Confirm Button"
+                },
+                "position": {
+                  "basis": "10em"
+                },
+                "props": {
+                  "text": "Confirm"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "Actions"
+            },
+            "position": {
+              "basis": "2.5em"
+            },
+            "props": {
+              "justify": "space-around"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Content"
+        },
+        "position": {
+          "basis": "30em"
+        },
+        "props": {
+          "direction": "column",
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

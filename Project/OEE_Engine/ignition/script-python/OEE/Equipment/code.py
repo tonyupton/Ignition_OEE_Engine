@@ -2,6 +2,9 @@ def notNone(value, alt):
 	if value is None: return alt
 	return value
 
+def uuid4():
+	import uuid
+	return str(uuid.uuid4()).upper()
 
 class Equipment:
 	def __init__(self, udtPath, timestamp):
@@ -223,7 +226,7 @@ class Equipment:
 			"DowntimeSeconds": self.getDowntimeSeconds(),
 			"GoodCount": self.getGoodCount(),
 			"BadCount": self.getBadCount(),
-			"ProductionId": OEE.UUID.UUID4(),
+			"ProductionId": uuid4(),
 			"RuntimeSeconds": self.getRuntimeSeconds(),
 			"StopCount": self.getStopCount()
 		}
@@ -258,7 +261,7 @@ class Equipment:
 		
 		tags = {
 			"BeginDateTime": self.getContextBeginDateTime() if lessThanOneMinute else self.getTimestampDateTime(),
-			"ContextId": self.getContextId() if lessThanOneMinute else OEE.UUID.UUID4(),
+			"ContextId": self.getContextId() if lessThanOneMinute else uuid4(),
 			"Enabled": self.getEnabled(),
 			"IdealRateCount": self.getIdealRateCount(),
 			"IdealRateSeconds": self.getIdealRateSeconds(),
@@ -299,7 +302,7 @@ class Equipment:
 			tags = {
 				"BeginDateTime": self.getTimestampDateTime(),
 				"ContextId": self.getContextId(),
-				"DowntimeId": OEE.UUID.UUID4(),
+				"DowntimeId": uuid4(),
 				"EventDateTime": self.getTimestampDateTime() if self.hasDowntimeStateChanged() else self.getDowntimeEventDateTime()
 			}
 		system.tag.writeBlocking([self.getUDTPath() + "/Logic/Downtime/" + key for key in tags.keys()], tags.values())
