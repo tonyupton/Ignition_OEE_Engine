@@ -4,7 +4,7 @@ def notNone(value, alt):
 
 def uuid4():
 	import uuid
-	return str(uuid.uuid4()).upper()
+	return str(uuid.uuid4()).lower()
 
 class Equipment:
 	def __init__(self, udtPath, timestamp):

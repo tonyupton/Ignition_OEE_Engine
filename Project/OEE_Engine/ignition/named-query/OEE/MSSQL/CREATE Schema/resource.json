@@ -18,7 +18,7 @@
     "cacheEnabled": false,
     "database": "",
     "fallbackEnabled": false,
-    "lastModificationSignature": "85afd39d4640388ca9a86e3651327e28edcb78a4aa3e37da2f45ab6ff44ad120",
+    "lastModificationSignature": "b49f1d5f9fb5a0c7946630c533f57fd7e6766c92941d1c171bd2ca406f05552a",
     "permissions": [
       {
         "zone": "",
@@ -27,7 +27,7 @@
     ],
     "lastModification": {
       "actor": "unauthenticated",
-      "timestamp": "2024-08-26T03:13:56Z"
+      "timestamp": "2024-09-04T02:11:00Z"
     },
     "syntaxProvider": "class com.adbs.syntax.MSSQLSyntaxProvider"
   }

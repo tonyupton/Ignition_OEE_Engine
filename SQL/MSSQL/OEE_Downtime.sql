@@ -1,27 +1,22 @@
-SET ANSI_NULLS ON
+CREATE TABLE [dbo].[OEE_Downtime] (
+    [DowntimeId]    UNIQUEIDENTIFIER NOT NULL,
+    [BeginDateTime] DATETIME         NOT NULL,
+    [EndDateTime]   DATETIME         NULL,
+    [ContextId]     UNIQUEIDENTIFIER NULL,
+    [EventDateTime] DATETIME         NULL,
+    [Category]      VARCHAR (50)     NULL,
+    [Reason]        VARCHAR (50)     NULL,
+    [Planned]       BIT              NULL,
+    CONSTRAINT [PK_OEE_Downtime] PRIMARY KEY NONCLUSTERED ([DowntimeId] ASC)
+);
+
+
 GO
-SET QUOTED_IDENTIFIER ON
+CREATE NONCLUSTERED INDEX [IX_OEE_Downtime_ContextId]
+    ON [dbo].[OEE_Downtime]([ContextId] ASC);
+
+
 GO
-CREATE TABLE [dbo].[OEE_Downtime](
-	[DowntimeId] [uniqueidentifier] NOT NULL,
-	[BeginDateTime] [datetime] NOT NULL,
-	[EndDateTime] [datetime] NULL,
-	[ContextId] [uniqueidentifier] NULL,
-	[EventDateTime] [datetime] NULL
-) ON [PRIMARY]
-GO
-CREATE CLUSTERED INDEX [IX_OEE_Downtime_BeginDateTime] ON [dbo].[OEE_Downtime]
-(
-	[BeginDateTime] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-GO
-ALTER TABLE [dbo].[OEE_Downtime] ADD  CONSTRAINT [PK_OEE_Downtime] PRIMARY KEY NONCLUSTERED 
-(
-	[DowntimeId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-GO
-CREATE NONCLUSTERED INDEX [IX_OEE_Downtime_ContextId] ON [dbo].[OEE_Downtime]
-(
-	[ContextId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-GO
+CREATE CLUSTERED INDEX [IX_OEE_Downtime_BeginDateTime]
+    ON [dbo].[OEE_Downtime]([BeginDateTime] ASC);
+
