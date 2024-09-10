@@ -1,3 +1,26 @@
+# MIT License
+#
+# Copyright (c) 2024 Anthony Upton
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
 def notNone(value, alt):
 	if value is None: return alt
 	return value
@@ -92,6 +115,8 @@ class Equipment:
 	def getLogicWorkOrderBeginDateTime(self):
 		return system.date.fromMillis(self.data["Logic"]["Context"]["WorkOrderBeginDateTime"]) if self.data["Logic"]["Context"]["WorkOrderBeginDateTime"] is not None else None
 	
+	
+	
 	#### /Logic/Downtime
 	
 	def getDowntimeBeginDateTime(self):
@@ -105,6 +130,7 @@ class Equipment:
 	
 	def getDowntimeEventDateTime(self):
 		return system.date.fromMillis(self.data["Logic"]["Downtime"]["EventDateTime"]) if self.data["Logic"]["Downtime"]["EventDateTime"] is not None else None
+	
 	
 	
 	#### /Logic/Production
@@ -132,6 +158,8 @@ class Equipment:
 	
 	def getProductionStopCount(self):
 		return self.data["Logic"]["Production"]["StopCount"]
+	
+	
 	
 	
 	#### /Logic
@@ -190,6 +218,8 @@ class Equipment:
 		return system.date.fromMillis(self.data["Context"]["WorkOrderBeginDateTime"]) if self.data["Context"]["WorkOrderBeginDateTime"] is not None else None
 	
 	
+	
+	
 	#### /Production
 	
 	def getGoodCount(self):
@@ -200,6 +230,8 @@ class Equipment:
 	
 	def getRunning(self):
 		return self.data["Production"]["Running"]
+	
+	
 	
 	
 	#### Data Processing Functions
